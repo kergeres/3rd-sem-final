@@ -18,8 +18,11 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
   
-function signUp ()
+function signUp()
 {
    let email = document.querySelector("#signUpEmail").value;
    let password = document.querySelector("#signUpPassword").value;
