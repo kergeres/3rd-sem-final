@@ -13,3 +13,39 @@
 *:focus {
     outline: 0 !important;
 }
+
+#signUpContainer input,
+button {
+    display: block;
+    margin: 20px auto;
+    width: 230px;
+    height: 35px;
+    border: 2px solid #099D18;
+    border-radius: 30px;
+    padding-left: 15px;
+    color: #099D18;
+}
+
+#signUpContainer button {
+    width: 245px;
+    height: 35px;
+    border: 1px solid #099D18;
+    background: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #143316;
+    font-size: 22px;
+    margin-top: 80px;
+}
+
+#signUpContainer button:hover {
+    border-color: black;
+}
+
+.auth-logo {
+    width: 150px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}

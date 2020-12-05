@@ -17,3 +17,28 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
+  
+function signUp ()
+{
+   let email = document.querySelector("#signUpEmail").value;
+   let password = document.querySelector("#signUpPassword").value;
+
+   auth.createUserWithEmailAndPassword(email, password);
+   alert("User Created");
+}
+
+function signIn ()
+{
+   let email = document.querySelector("#signUpEmail").value;
+   let password = document.querySelector("#signUpPassword").value;
+
+   auth.signInWithEmailAndPassword(email, password);
+   alert("User Logged in");
+}
+
+function signOut ()
+{
+   auth.signOut();
+   alert("User Signed out");
+}
