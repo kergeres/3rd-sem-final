@@ -1,0 +1,15 @@
+:root {
+    --blue: #4B75FF;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+*:focus {
+    outline: 0 !important;
+}
