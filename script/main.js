@@ -22,14 +22,7 @@
   const db = firebase.firestore();
 
   
-function signUp()
-{
-   let email = document.querySelector("#signUpEmail").value;
-   let password = document.querySelector("#signUpPassword").value;
 
-   auth.createUserWithEmailAndPassword(email, password);
-   alert("User Created");
-}
 
 function signIn ()
 {
@@ -44,4 +37,13 @@ function signOut ()
 {
    auth.signOut();
    alert("User Signed out");
+}
+
+function signUp()
+{
+   let email = document.querySelector("#signUpEmail").value;
+   let password = document.querySelector("#sign-up-password").value;
+
+   auth.createUserWithEmailAndPassword(email, password);
+   alert("User Created");
 }
