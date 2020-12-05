@@ -14,6 +14,7 @@
     outline: 0 !important;
 }
 
+<<<<<<< Updated upstream
 #signUpContainer input,
 button {
     display: block;
@@ -48,4 +49,175 @@ button {
     margin-bottom: 20px;
     margin-left: 50%;
     transform: translateX(-50%);
+=======
+
+/* Wiktor */
+
+body {
+    max-width: 400px;
+    background-image: url(../media/background.png);
+    background-attachment: fixed;
+    background-size: 400px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo{
+    width: 80px;
+}
+
+header{
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px #d4d4d4;
+    border: solid 1px #999;
+    padding: 10px;
+}
+/* menu */
+
+.menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 10px;
+    position: relative;
+    right: 20px;
+    top: -55px;
+    user-select: none;
+}
+
+.menu_item {
+    float: left;
+    padding: 0px;
+    list-style-type: none;
+    margin: 10px 0px;
+}
+
+.navicon {
+    background: #15243e;
+    display: block;
+    height: 5px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 30px;
+}
+
+.navicon:before,
+.navicon:after {
+    background: #15243e;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.navicon:before {
+    top: 10px;
+}
+
+.navicon:after {
+    top: -10px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.menu-btn:checked ~ .menu {
+    display: block;
+    height: 200px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+.dropdown_menu {
+    display: none;
+    position: relative;
+    align-items: center;
+    transition-duration: 1s;
+    flex-direction: column;
+    padding: 20px;
+    top: 10px
+}
+.nav_link {
+    text-decoration: none;
+    color: #000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav_link:hover {
+    opacity: 0.5
+}
+h3:hover {
+    opacity: 0.5
+}
+
+.menu-btn:checked ~ .dropdown_menu {
+    display: flex;
+}
+
+/* function buttons */
+
+.function_button{
+    width: 340px;
+    height: 60px;
+    background: #fff;
+    border: solid 1px #999;
+    box-shadow: 0px 10px 10px #d4d4d4;
+    border-radius: 10px;
+    margin: 40px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon{
+    width: 60px;
+    position: relative;
+    top: -15px;
+    margin: 10px;
+}
+.icon_small{
+    width: 70px;
+    position: relative;
+    top: -15px;
+    margin: 10px 3px 10px 10px;
+}
+
+.function_name{
+margin: 10px;
+}
+
+
+contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact_item{
+    list-style-type: none;
+    margin: 10px 0px;
+>>>>>>> Stashed changes
 }
