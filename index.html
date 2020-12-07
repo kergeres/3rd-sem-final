@@ -60,6 +60,14 @@
             <h1 class="function_name">Add buckets</h1>
             <img class="icon" src="./media/bucket.png">
         </button>
+        <div class="content">
+            <div id="time"></div>
+            <h1 class="counter-display">(..)</h1>
+            <h5 class="buckets_used">buckets used</h5>
+            <img src="./media/bucket-icon.png" class="bucket-icon">
+            <button class="counter-plus">ADD BUCKET</button>
+            <button class="counter-minus">DELETE BUCKET</button>
+        </div>
         <button class="function_button">
             <h1 class="function_name">Upcoming events</h1>
             <img class="icon_small" src="./media/callendar.png">
@@ -75,34 +83,36 @@
     </section>
     <main>
         <section id="signUpContainer">
-       <img src="/img/Logo.png" class="auth-logo">
-       
-      <form> 
-        <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
-       <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
-       <!-- <input id="signUpPassword2" type="password" placeholder="Password"> -->
-       <button onclick="signUp()">sign up</button>
-    </form>
-            </section>
+            <img src="/img/Logo.png" class="auth-logo">
 
-            <section id="signUpContainer">
-                <img src="/img/Logo.png" class="auth-logo">
-                
-               <form> 
-                 <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
+            <form>
+                <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
+                <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
+                <!-- <input id="signUpPassword2" type="password" placeholder="Password"> -->
+                <button onclick="signUp()">sign up</button>
+            </form>
+        </section>
+
+        <section id="signUpContainer">
+            <img src="/img/Logo.png" class="auth-logo">
+
+            <form>
+                <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
                 <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
                 <!-- <input id="signUpPassword2" type="password" placeholder="Password"> -->
                 <button onclick="signIn()">sign in</button>
                 <p>not registered? sign up <u>here</u></p>
-             </form>
-                     </section>
+            </form>
+        </section>
 
-            <section id="calendarContainer">
-                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%236cc073&amp;ctz=Europe%2FBudapest&amp;src=d3JpdGVhbmVtYWlsdG9kYXZpZEBnbWFpbC5jb20&amp;src=NWhwbnF2bjNoMnZiY3JobGxyN29jdGRvMnVkcWZrbW5AaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%237CB342&amp;showTitle=0&amp;title=Events&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;showTz=0&amp;hl=en_GB&amp;showNav=0&amp;showDate=1" class="calendar-e"   style="border-width:0" frameborder="0" scrolling="no"></iframe>    
+        <section id="calendarContainer">
+            <iframe
+                src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%236cc073&amp;ctz=Europe%2FBudapest&amp;src=d3JpdGVhbmVtYWlsdG9kYXZpZEBnbWFpbC5jb20&amp;src=NWhwbnF2bjNoMnZiY3JobGxyN29jdGRvMnVkcWZrbW5AaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%237CB342&amp;showTitle=0&amp;title=Events&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;showTz=0&amp;hl=en_GB&amp;showNav=0&amp;showDate=1"
+                class="calendar-e" style="border-width:0" frameborder="0" scrolling="no"></iframe>
 
-            </section>
+        </section>
 
-            
+
     </main>
 
     <contact>

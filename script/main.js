@@ -16,10 +16,39 @@ for (i = 0; i < coll.length; i++) {
    });
 }
 
+// date //
+const monthNames = ["January", "February", "March", "April", "May", "June",
+   "July", "August", "September", "October", "November", "December"
+];
 
-"use strict";
+n = new Date();
+y = n.getFullYear();
+m = monthNames[n.getMonth()];
+d = n.getDate();
+document.getElementById("time").innerHTML = d + " " + m + " " + y;
 
+// buckets counter //
+let counterDisplayElem = document.querySelector('.counter-display');
+let counterMinusElem = document.querySelector('.counter-minus');
+let counterPlusElem = document.querySelector('.counter-plus');
 
+let count = 0;
+
+updateDisplay();
+
+counterPlusElem.addEventListener("click", () => {
+   count++;
+   updateDisplay();
+});
+
+counterMinusElem.addEventListener("click", () => {
+   count--;
+   updateDisplay();
+});
+
+function updateDisplay() {
+   counterDisplayElem.innerHTML = count;
+};
 
 
 // Your web app's Firebase configuration
