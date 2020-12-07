@@ -26,7 +26,7 @@
 function signIn ()
 {
    let email = document.querySelector("#signUpEmail").value;
-   let password = document.querySelector("#signUpPassword").value;
+   let password = document.querySelector("#signUpPassw").value;
 
    auth.signInWithEmailAndPassword(email, password);
    alert("User Logged in");
