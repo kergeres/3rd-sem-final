@@ -229,3 +229,10 @@ contact {
     margin: 0 auto;
     text-align: center;
 }
+
+.calendar-e {
+    border: solid 1px #777;
+    width: 100%;
+    height: 600px;
+
+}
