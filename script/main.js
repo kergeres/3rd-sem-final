@@ -19,7 +19,6 @@
   firebase.analytics();
 
   const auth = firebase.auth();
-  const db = firebase.firestore();
 
   
 
@@ -42,8 +41,9 @@ function signOut ()
 function signUp()
 {
    let email = document.querySelector("#signUpEmail").value;
-   let password = document.querySelector("#sign-up-password").value;
+   let password = document.querySelector("#signUpPassw").value;
 
    auth.createUserWithEmailAndPassword(email, password);
    alert("User Created");
+  
 }
