@@ -91,3 +91,16 @@ function signUp() {
    auth.createUserWithEmailAndPassword(email, password);
    alert("User Created");
 }
+
+// add bucket to firebase //
+
+const db = firebase.firestore();
+
+const increment = firebase.firestore.FieldValue.increment(1);
+const decrement = firebase.firestore.FIeldValue.increment(-1);
+
+const storyRef = db.collection('buckets').doc('buckets_counter');
+
+storyRef.update({ count: increment });
+
+storyRef.update({ count: decrement });

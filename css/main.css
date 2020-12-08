@@ -24,6 +24,7 @@ button {
     border-radius: 30px;
     padding-left: 15px;
     color: #099D18;
+    cursor: pointer;
 }
 
 #signUpContainer button {
