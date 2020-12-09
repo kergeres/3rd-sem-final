@@ -8,8 +8,7 @@
     <meta name="author" content="Wiktor, Georgiana and David">
     <title>Golf app</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" type="image/svg" href="" />
-    <link href="">
+    <link rel="shortcut icon" type="image/svg" href="/img/Logo.png" />
 </head>
 
 <body>
@@ -107,20 +106,34 @@
     </section>
     <main>
         <section id="signUpContainer">
-            <img src="https://cdn11.bigcommerce.com/s-999jbj41m8/images/stencil/1280x1280/products/133/6922/oak-trees__58118.1601661231.jpg?c=2"
-                class="auth-logo">
-            <input id="signUpEmail" type="email" placeholder="Email">
-            <input id="signUpPassword" type="password" placeholder="Password">
-            <input id="signUpPassword2" type="password" placeholder="Password">
-            <button onclick="signUp()">Sign Up</button>
-        </section>
-    </main>
+            <img src="/img/Logo.png" class="auth-logo">
 
-    <h1>sign up</h1>
-    <input>
-    <input>
-    <input>
-    <button></button>
+            <form>
+                <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
+                <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
+                <!-- <input id="signUpPassword2" type="password" placeholder="Password"> -->
+                <button onclick="signUp()">sign up</button>
+            </form>
+        </section>
+
+        <section id="signUpContainer">
+            <img src="/img/Logo.png" class="auth-logo">
+
+            <form>
+                <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
+                <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
+                <!-- <input id="signUpPassword2" type="password" placeholder="Password"> -->
+                <button onclick="signIn()">sign in</button>
+                <p>not registered? sign up <u>here</u></p>
+            </form>
+        </section>
+
+        <section id="calendarContainer">
+            <iframe
+                src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%236cc073&amp;ctz=Europe%2FBudapest&amp;src=d3JpdGVhbmVtYWlsdG9kYXZpZEBnbWFpbC5jb20&amp;src=NWhwbnF2bjNoMnZiY3JobGxyN29jdGRvMnVkcWZrbW5AaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%237CB342&amp;showTitle=0&amp;title=Events&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;showTz=0&amp;hl=en_GB&amp;showNav=0&amp;showDate=1"
+                style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+        </section>
     </main>
 
     <contact>
