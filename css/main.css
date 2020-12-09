@@ -1,3 +1,33 @@
+@font-face{
+    src: url(../media/FontsFree-Net-point-soft-book.ttf);
+    font-family: golf;
+}
+
+@font-face{
+    src: url(../media/Ndiscover\ -\ Point\ Soft\ DEMO\ Light.otf);
+    font-family: golf-light;
+}
+
+
+h1{
+    font-family: golf;
+}
+h2{ 
+    font-family: golf;
+}
+h5{
+    font-family: golf-light;
+}
+input{
+    font-family: golf-light;
+}
+p{
+    font-family: golf-light;
+}
+button{
+    font-family: golf;
+}
+
 :root {
     --blue: #4B75FF;
 
@@ -262,6 +292,7 @@ contact {
 #time{
 text-align: center;
 font-size: 16pt;
+font-family: golf-light;
 }
 
 .counter-display{
