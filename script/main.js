@@ -50,68 +50,7 @@ function updateDisplay() {
    counterDisplayElem.innerHTML = count;
 };
 
-// add bucket to firebase - option 1
-
-// We save our button element into a variable
-const btn = counterPlusElem;
-// We save our counter element into a variable
-const counterID = counterDisplayElem;
-
-// Let's save our Firebase Realtime DB URL into a variable
-const firebase = "https://rd-sem-final-default-rtdb.europe-west1.firebasedatabase.app/";
-
-// Because we are fetching the current counter state from a Database,
-// We don't need to start the counter at 0. 
-// let counter = 0;
-
-// We want to fetch and display the current state
-// of the counter every time someone visits our website.
-function get() {
-   // We want the data from the child we created, so let's concat it into our URL
-   // Note that every endpoint needs .json at the end!
-   axios.get(firebase + "my-online-counter.json").then((response) => {
-      // Once the connection made to the Database, we can use the reponse to update the counter
-      counter = response.data.counter;
-      // Once the coutner updated, we can display the current counter state.
-      updateCounter();
-   });
-}
-// We start our counter at 0
-let counter = 0;
-
-// Everytime a user click on the button, we will call this function to display the counter
-function updateCounter() {
-   counterID.innerHTML = `${counter} visitors clicked on this button`;
-}
-
-// Everytime a user clicks on the button, we will increment the counter by one.
-btn.addEventListener("click", function (e) {
-   counter++;
-   updateCounter();
-});
-
-// Everytime a user clicks on the button, 
-// we want to Update the counter into the database
-btn.addEventListener("click", function (e) {
-   axios
-      // First, we need to reach our DB
-      .put(firebase + "my-online-counter.json", {
-         // Then, we needs to specify the new data for my-online-counter
-         // In our case, we simply increment the counter into the DB by one.
-         counter: counter + 1
-      })
-      .then(() => {
-         // Once it's done, we call the get() function again. 
-         //To display the updated counter.
-         get();
-      })
-      // If there is an error, we can log it.
-      .catch((error) => console.log(error));
-});
-
-get();
-
-// add bucket to firebase - option 2
+// add bucket to firebase
 
 const db = firebase.firestore();
 
