@@ -65,8 +65,8 @@
             <h1 class="counter-display">(..)</h1>
             <h5 class="buckets_used">buckets used</h5>
             <img src="./media/bucket-icon.png" class="bucket-icon">
-            <button class="counter-plus">ADD BUCKET</button>
-            <button class="counter-minus">DELETE BUCKET</button>
+            <button class="counter counter-plus" onclick="submitThis()">ADD BUCKET</button>
+            <button class="counter counter-minus" onclick="submitThis()">DELETE BUCKET</button>
         </div>
         <button class="function_button collapsible">
             <h1 class="function_name">Upcoming events</h1>
@@ -87,18 +87,18 @@
         <div class="content1">
             <section id="charts">
                 <section id="wkl">
-                <canvas id="chartContainer"></canvas>
+                    <canvas id="chartContainer"></canvas>
                 </section>
                 <section id="mnt">
-                <canvas id="chart"></canvas>
+                    <canvas id="chart"></canvas>
                 </section>
                 <section id="yrl">
-                <canvas id="chrt"></canvas>
+                    <canvas id="chrt"></canvas>
                 </section>
                 <div class="but">
                     <a href="#wkl"><button onclick="getData()" class="btn">Weekly</button></a>
-                   <a href="#mnt"> <button onclick="getMonth()" class="btn">Monthly</button></a>
-                   <a href="#yrl"><button onclick="getYear()" class="btn">Yearly</button></a>
+                    <a href="#mnt"> <button onclick="getMonth()" class="btn">Monthly</button></a>
+                    <a href="#yrl"><button onclick="getYear()" class="btn">Yearly</button></a>
                 </div>
             </section>
         </div>
