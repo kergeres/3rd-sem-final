@@ -16,6 +16,246 @@ for (i = 0; i < coll.length; i++) {
    });
 }
 
+
+
+
+//creating the weekly charts 
+// 1: data
+// Array of objects
+let _data = [];
+
+async function getData() {
+  let response = await fetch("json/weeklydata.json");
+  _data = await response.json();
+  console.log(_data);
+  appendChart();
+};
+
+getData();
+
+// 2: prepare data for chart
+// seperating the objects to arrays: dates and infected
+// why? that's how chart.js reads the data :)
+function prepareData(data) {
+  // declaring two array to store the data 
+  let day = [];
+  let buckets = [];
+
+  // looping through the data array
+  for (const object of data) {
+    // adding the values to the different arrays
+    day.push(object.date);
+    buckets.push(object.bucket);
+  }
+  // returning the two arrays inside and object
+  // we cannot return to values - that's why we have to do it inside an array
+  return {
+    day,
+    buckets
+  };
+}
+
+// 3: create and append the chart
+function appendChart() {
+  // using prepareData() to get the excact data we want
+  let data = prepareData(_data);
+  //open the developer console to inspect the result
+  console.log(data);
+  let chartContainer = document.getElementById('chartContainer');
+  let chart = new Chart(chartContainer, {
+    // The type of chart we want to create
+    type: 'bar',
+    // The data for our dataset
+    data: {
+      labels: data.day, // refering to the data object, holding data from prepareData()
+      datasets: [{
+         barPercentage: 1.0,
+        data: data.buckets, // refering to the data object, holding data from prepareData()
+        label: 'Weekly buckets',
+        borderWidth: 1,
+        backgroundColor: '#69A42E', // Customise the graf color etc. Go to the docs to find more: https://www.chartjs.org/docs/latest/
+        borderColor: '#3F611C'
+      }]
+    },
+    // Configuration options goes here
+    // Go to the docs to find more: https://www.chartjs.org/docs/latest/
+    options: {
+      title: {
+        
+        display: true,
+        text: 'Number of buckets of balls used'
+      },
+      scales: {
+         yAxes: [{
+           ticks: {
+             beginAtZero: true
+           },
+           
+         }]
+       }
+    }
+
+  });
+}
+
+//creating the monthly charts
+// 1: data
+// Array of objects
+let _month = [];
+
+async function getMonth() {
+  let response = await fetch("json/monthlydata.json");
+  _month = await response.json();
+  console.log(_month);
+  appendChar();
+};
+
+getMonth();
+
+// 2: prepare data for chart
+// seperating the objects to arrays: dates and infected
+// why? that's how chart.js reads the data :)
+function prepareMonth(month) {
+  // declaring two array to store the data 
+  let week = [];
+  let buckets = [];
+
+  // looping through the data array
+  for (const object of month) {
+    // adding the values to the different arrays
+    week.push(object.weeks);
+    buckets.push(object.bucket);
+  }
+  // returning the two arrays inside and object
+  // we cannot return to values - that's why we have to do it inside an array
+  return {
+    week,
+    buckets
+  };
+}
+
+// 3: create and append the chart
+function appendChar() {
+  // using prepareData() to get the excact data we want
+  let month = prepareMonth(_month);
+  //open the developer console to inspect the result
+  console.log(month);
+  let chartContainer = document.getElementById('chart');
+  let chart = new Chart(chartContainer, {
+    // The type of chart we want to create
+    type: 'bar',
+    // The data for our dataset
+    data: {
+      labels: month.week, // refering to the data object, holding data from prepareData()
+      datasets: [{
+         barPercentage: 1.0,
+        data: month.buckets, // refering to the data object, holding data from prepareData()
+        label: 'Monthly buckets',
+        borderWidth: 1,
+        backgroundColor: '#69A42E', // Customise the graf color etc. Go to the docs to find more: https://www.chartjs.org/docs/latest/
+        borderColor: '#3F611C'
+      }]
+    },
+    // Configuration options goes here
+    // Go to the docs to find more: https://www.chartjs.org/docs/latest/
+    options: {
+      title: {
+        
+        display: true,
+        text: 'Number of buckets of balls used'
+      },
+      scales: {
+         yAxes: [{
+           ticks: {
+             beginAtZero: true
+           },
+           
+         }]
+       }
+    }
+
+  });
+}
+
+//creating the yearly charts
+// 1: data
+// Array of objects
+let _yea = [];
+
+async function getYear() {
+  let response = await fetch("json/yearlydata.json");
+  _yea = await response.json();
+  console.log(_yea);
+  appendCha();
+};
+
+getYear();
+
+// 2: prepare data for chart
+// seperating the objects to arrays: dates and infected
+// why? that's how chart.js reads the data :)
+function prepareYear(Year) {
+  // declaring two array to store the data 
+  let month = [];
+  let buckets = [];
+
+  // looping through the data array
+  for (const object of Year) {
+    // adding the values to the different arrays
+    month.push(object.months);
+    buckets.push(object.bucket);
+  }
+  // returning the two arrays inside and object
+  // we cannot return to values - that's why we have to do it inside an array
+  return {
+    month,
+    buckets
+  };
+}
+
+// 3: create and append the chart
+function appendCha() {
+  // using prepareData() to get the excact data we want
+  let year = prepareYear(_yea);
+  //open the developer console to inspect the result
+  console.log(year);
+  let chartContainer = document.getElementById('chrt');
+  let chart = new Chart(chartContainer, {
+    // The type of chart we want to create
+    type: 'bar',
+    // The data for our dataset
+    data: {
+      labels: year.month, // refering to the data object, holding data from prepareData()
+      datasets: [{
+         barPercentage: 1.0,
+        data: year.buckets, // refering to the data object, holding data from prepareData()
+        label: 'Yearly buckets',
+        borderWidth: 1,
+        backgroundColor: '#69A42E', // Customise the graf color etc. Go to the docs to find more: https://www.chartjs.org/docs/latest/
+        borderColor: '#3F611C'
+      }]
+    },
+    // Configuration options goes here
+    // Go to the docs to find more: https://www.chartjs.org/docs/latest/
+    options: {
+      title: {
+        
+        display: true,
+        text: 'Number of buckets of balls used'
+      },
+      scales: {
+         yAxes: [{
+           ticks: {
+             beginAtZero: true
+           },
+           
+         }]
+       }
+    }
+
+  });
+}
+
 // date 
 const monthNames = ["January", "February", "March", "April", "May", "June",
    "July", "August", "September", "October", "November", "December"

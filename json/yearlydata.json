@@ -1,0 +1,50 @@
+[
+    {
+      "months": "Jan",
+      "bucket": 0
+    },
+    {
+      "months": "Feb",
+      "bucket": 0
+    },
+    {
+      "months": "Mar",
+      "bucket": 25
+    },
+    {
+      "months": "Apr",
+      "bucket": 24
+    },
+    {
+      "months": "May",
+      "bucket": 24
+    },
+    {
+      "months": "Jun",
+      "bucket": 32
+    },
+    {
+      "months": "Jul",
+      "bucket": 16
+    },
+    {
+      "months": "Aug",
+      "bucket": 8
+    },
+    {
+      "months": "Sep",
+      "bucket": 8
+    },
+    {
+      "months": "Oct",
+      "bucket": 32
+    },
+    {
+      "months": "Nov",
+      "bucket": 8
+    },
+    {
+      "months": "Dec",
+      "bucket": 0
+    }
+  ]

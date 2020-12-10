@@ -9,6 +9,7 @@
     <title>Golf app</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" type="image/svg" href="/img/Logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
 </head>
 
 <body>
@@ -83,13 +84,23 @@
             <h1 class="function_name">My buckets history</h1>
             <img class="icon" src="./media/chart.png">
         </button>
-        <div class="content">
-            <div id="time"></div>
-            <h1 class="counter-display">(..)</h1>
-            <h5 class="buckets_used">buckets used</h5>
-            <img src="./media/bucket-icon.png" class="bucket-icon">
-            <button class="counter-plus">ADD BUCKET</button>
-            <button class="counter-minus">DELETE BUCKET</button>
+        <div class="content1">
+            <section id="charts">
+                <section id="wkl">
+                <canvas id="chartContainer"></canvas>
+                </section>
+                <section id="mnt">
+                <canvas id="chart"></canvas>
+                </section>
+                <section id="yrl">
+                <canvas id="chrt"></canvas>
+                </section>
+                <div class="but">
+                    <a href="#wkl"><button onclick="appendChart()" class="btn">Weekly</button></a>
+                   <a href="#mnt"> <button onclick="appendChar()" class="btn">Monthly</button></a>
+                   <a href="#yrl"><button onclick="appendCha()" class="btn">Yearly</button></a>
+                </div>
+            </section>
         </div>
         <button class="function_button collapsible">
             <h1 class="function_name">Map</h1>
@@ -166,6 +177,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="./script/main.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
 
