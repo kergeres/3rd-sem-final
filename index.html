@@ -80,7 +80,7 @@
 
             </section>
         </div>
-        <button class="function_button collapsible">
+        <button class="function_button collapsible" onclick="getData();">
             <h1 class="function_name">My buckets history</h1>
             <img class="icon" src="./media/chart.png">
         </button>
@@ -96,9 +96,9 @@
                 <canvas id="chrt"></canvas>
                 </section>
                 <div class="but">
-                    <a href="#wkl"><button onclick="appendChart()" class="btn">Weekly</button></a>
-                   <a href="#mnt"> <button onclick="appendChar()" class="btn">Monthly</button></a>
-                   <a href="#yrl"><button onclick="appendCha()" class="btn">Yearly</button></a>
+                    <a href="#wkl"><button onclick="getData()" class="btn">Weekly</button></a>
+                   <a href="#mnt"> <button onclick="getMonth()" class="btn">Monthly</button></a>
+                   <a href="#yrl"><button onclick="getYear()" class="btn">Yearly</button></a>
                 </div>
             </section>
         </div>

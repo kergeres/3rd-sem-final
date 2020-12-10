@@ -31,7 +31,7 @@ async function getData() {
   appendChart();
 };
 
-getData();
+// getData();
 
 // 2: prepare data for chart
 // seperating the objects to arrays: dates and infected
@@ -110,7 +110,7 @@ async function getMonth() {
   appendChar();
 };
 
-getMonth();
+// Month();
 
 // 2: prepare data for chart
 // seperating the objects to arrays: dates and infected
@@ -189,7 +189,7 @@ async function getYear() {
   appendCha();
 };
 
-getYear();
+
 
 // 2: prepare data for chart
 // seperating the objects to arrays: dates and infected
