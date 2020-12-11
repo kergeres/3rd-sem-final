@@ -69,7 +69,7 @@ function appendChart() {
     data: {
       labels: data.day, // refering to the data object, holding data from prepareData()
       datasets: [{
-        barPercentage: 1.0,
+         barPercentage: 1.0,
         data: data.buckets, // refering to the data object, holding data from prepareData()
         label: 'Weekly buckets',
         borderWidth: 1,
@@ -81,18 +81,18 @@ function appendChart() {
     // Go to the docs to find more: https://www.chartjs.org/docs/latest/
     options: {
       title: {
-
+        
         display: true,
-        text: 'Number of buckets of balls used'
+        text: 'Buckets of balls'
       },
       scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          },
-
-        }]
-      }
+         yAxes: [{
+           ticks: {
+             beginAtZero: true
+           },
+           
+         }]
+       }
     }
 
   });
@@ -110,7 +110,7 @@ async function getMonth() {
   appendChar();
 };
 
-Month();
+getMonth();
 
 // 2: prepare data for chart
 // seperating the objects to arrays: dates and infected
@@ -148,7 +148,7 @@ function appendChar() {
     data: {
       labels: month.week, // refering to the data object, holding data from prepareData()
       datasets: [{
-        barPercentage: 1.0,
+         barPercentage: 1.0,
         data: month.buckets, // refering to the data object, holding data from prepareData()
         label: 'Monthly buckets',
         borderWidth: 1,
@@ -160,18 +160,18 @@ function appendChar() {
     // Go to the docs to find more: https://www.chartjs.org/docs/latest/
     options: {
       title: {
-
+        
         display: true,
-        text: 'Number of buckets of balls used'
+        text: 'Buckets of balls'
       },
       scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          },
-
-        }]
-      }
+         yAxes: [{
+           ticks: {
+             beginAtZero: true
+           },
+           
+         }]
+       }
     }
 
   });
@@ -189,7 +189,7 @@ async function getYear() {
   appendCha();
 };
 
-
+getYear();
 
 // 2: prepare data for chart
 // seperating the objects to arrays: dates and infected
@@ -227,7 +227,7 @@ function appendCha() {
     data: {
       labels: year.month, // refering to the data object, holding data from prepareData()
       datasets: [{
-        barPercentage: 1.0,
+         barPercentage: 1.0,
         data: year.buckets, // refering to the data object, holding data from prepareData()
         label: 'Yearly buckets',
         borderWidth: 1,
@@ -239,22 +239,34 @@ function appendCha() {
     // Go to the docs to find more: https://www.chartjs.org/docs/latest/
     options: {
       title: {
-
+        
         display: true,
-        text: 'Number of buckets of balls used'
+        text: 'Buckets of balls'
       },
       scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          },
-
-        }]
-      }
+         yAxes: [{
+           ticks: {
+             beginAtZero: true
+           },
+           
+         }]
+       }
     }
 
   });
 }
+
+function showChart(id) {
+  //hide all charts
+  let charts = document.querySelectorAll("#charts section");
+  for (const chart of charts) {
+    chart.style.display = "none";
+  }
+  // show chart with the given id 
+  document.querySelector(`#${id}`).style.display = "block";
+}
+// call the function with the id of the chart wanted to display by default
+showChart("wkl");
 
 // date 
 const monthNames = ["January", "February", "March", "April", "May", "June",
