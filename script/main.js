@@ -1,4 +1,3 @@
-
 // home
 
 var coll = document.getElementsByClassName("collapsible");
@@ -321,7 +320,7 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
+const db = firebase.firestore();
 
 const auth = firebase.auth();
 
@@ -347,20 +346,15 @@ function signUp() {
 }
 
 
-// add bucket to firebase
+// add buckets to firebase
 
-counterDisplayElem
 let counterSubmit = document.querySelector('.counter');
 function submitThis() {
-  window.alert("test");
-  db.collection("Wiktor").doc("Buckets").set({
-    date: "11.12.2020",
-    number: "5"
+  db.collection("user").doc(buckets).set({
+    date: n,
+    number: count + 1,
   })
     .then(function () {
-      console.log("Buckets added successfully!");
-    })
-    .catch(function (error) {
-      console.error("Error", error);
+      console.log(count);
     });
 }
