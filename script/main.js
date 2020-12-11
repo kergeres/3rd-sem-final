@@ -306,10 +306,8 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+
 const auth = firebase.auth();
-
-
-
 
 function signIn() {
   let email = document.querySelector("#signUpEmail").value;
@@ -338,7 +336,15 @@ function signUp() {
 counterDisplayElem
 let counterSubmit = document.querySelector('.counter');
 function submitThis() {
-  let firebaseRef = firebase.database().ref();
-  window.alert("text");
-  firebaseRef.child("number").set("some value");
+  window.alert("test");
+  db.collection("Wiktor").doc("Buckets").set({
+    date: "11.12.2020",
+    number: "5"
+  })
+    .then(function () {
+      console.log("Buckets added successfully!");
+    })
+    .catch(function (error) {
+      console.error("Error", error);
+    });
 }
