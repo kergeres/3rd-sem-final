@@ -256,6 +256,7 @@ function appendCha() {
   });
 }
 
+//code done thanks to Rasmus Cederdorff
 function showChart(id) {
   //hide all charts
   let charts = document.querySelectorAll("#charts section");
