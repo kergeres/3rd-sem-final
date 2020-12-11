@@ -18,7 +18,7 @@ for (i = 0; i < coll.length; i++) {
 
 
 
-
+//Georgiana
 //creating the weekly charts 
 // 1: data
 // Array of objects
@@ -98,6 +98,7 @@ function appendChart() {
   });
 }
 
+//Georgiana
 //creating the monthly charts
 // 1: data
 // Array of objects
@@ -177,6 +178,7 @@ function appendChar() {
   });
 }
 
+//Georgiana
 //creating the yearly charts
 // 1: data
 // Array of objects
@@ -257,6 +259,7 @@ function appendCha() {
 }
 
 //code done thanks to Rasmus Cederdorff
+//Georgiana
 function showChart(id) {
   //hide all charts
   let charts = document.querySelectorAll("#charts section");
