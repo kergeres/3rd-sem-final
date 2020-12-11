@@ -256,6 +256,18 @@ function appendCha() {
   });
 }
 
+function showChart(id) {
+  //hide all charts
+  let charts = document.querySelectorAll("#charts section");
+  for (const chart of charts) {
+    chart.style.display = "none";
+  }
+  // show chart with the given id 
+  document.querySelector(`#${id}`).style.display = "block";
+}
+// call the function with the id of the chart wanted to display by default
+showChart("wkl");
+
 // date 
 const monthNames = ["January", "February", "March", "April", "May", "June",
    "July", "August", "September", "October", "November", "December"
