@@ -15,6 +15,9 @@ h1{
 h2{ 
     font-family: golf;
 }
+h3{ 
+    font-family: golf;
+}
 h5{
     font-family: golf-light;
 }
@@ -243,6 +246,12 @@ h3:hover {
     top: -15px;
     margin: 10px 3px 10px 10px;
 }
+.icon_contact{
+    width: 50px;
+    position: relative;
+    top: -15px;
+    margin: 10px 3px 10px 10px;
+}
 
 .icon_margin_left{
     margin-right: 0px;
@@ -376,7 +385,7 @@ padding: 0px;
 }
 
 .margin-top{
-    margin: 30px 0px 0px 0px
+    margin: 30px 0px -5px 0px
 }
 /*Georgiana*/
 .btn-group button {
