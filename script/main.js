@@ -83,7 +83,7 @@ function appendChart() {
       title: {
         
         display: true,
-        text: 'Buckets of balls'
+        text: 'Number of buckets of balls used'
       },
       scales: {
          yAxes: [{
@@ -162,7 +162,7 @@ function appendChar() {
       title: {
         
         display: true,
-        text: 'Buckets of balls'
+        text: 'Number of buckets of balls used'
       },
       scales: {
          yAxes: [{
@@ -241,7 +241,7 @@ function appendCha() {
       title: {
         
         display: true,
-        text: 'Buckets of balls'
+        text: 'Number of buckets of balls used'
       },
       scales: {
          yAxes: [{

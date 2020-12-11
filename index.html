@@ -85,20 +85,23 @@
             <img class="icon" src="./media/chart.png">
         </button>
         <div class="content1">
-            <section id="charts">
+            <section id="charts" >
                 <section id="wkl">
                     <canvas id="chartContainer"></canvas>
+                    <h1 class="dt">10-17 November 2020</h1>
                 </section>
                 <section id="mnt">
                     <canvas id="chart"></canvas>
+                    <h1 class="dt">November 2020</h1>
                 </section>
                 <section id="yrl">
                     <canvas id="chrt"></canvas>
+                    <h1 class="dt">2020</h1>
                 </section>
-                <div class="but">
-                    <button onclick="showChart('wkl')" class="btn">Weekly</button>
-                   <button onclick="showChart('mnt')" class="btn">Monthly</button>
-                   <button onclick="showChart('yrl')" class="btn">Yearly</button>
+                <div class="btn-group">
+                    <button onclick="showChart('wkl')" class="bttn">Weekly</button>
+                   <button onclick="showChart('mnt')" class="bttn">Monthly</button>
+                   <button onclick="showChart('yrl')" class="bttn">Yearly</button>
                 </div>
             </section>
         </div>
