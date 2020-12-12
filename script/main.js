@@ -324,17 +324,34 @@ const db = firebase.firestore();
 
 const auth = firebase.auth();
 
+
+
 function signIn() {
   let email = document.querySelector("#signUpEmail").value;
   let password = document.querySelector("#signUpPassw").value;
-
+  let CUser = auth.currentUser;
   auth.signInWithEmailAndPassword(email, password);
-  alert("User Logged in");
+  
+  alert(CUser.email);
+  
+
+  
 }
 
 function signOut() {
   auth.signOut();
   alert("User Signed out");
+}
+
+function sendFeedback()
+{
+  let feedbacks = [];
+ let message = document.querySelector("#feedb").value
+
+ feedbacks.push(message);
+
+ 
+
 }
 
 function signUp() {
@@ -343,12 +360,13 @@ function signUp() {
   let texxt = document.querySelector("#texxt").value;
     
 
-  auth.createUserWithEmailAndPassword(email, password).then(cred =>{
-    return db.collection('users').doc(cred.user.uid).set({
-      text: texxt
-    });
-  })
-  alert(user.uid);
+  auth.createUserWithEmailAndPassword(email, password)
+  // .then(cred =>{
+  //   return db.collection('users').doc(cred.user.uid).set({
+  //     text: texxt
+  //   });
+  // })
+  // alert(user.uid);
 }
 
 

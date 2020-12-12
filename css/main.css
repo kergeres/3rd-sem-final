@@ -1,38 +1,47 @@
-@font-face{
+@font-face {
     src: url(../media/FontsFree-Net-point-soft-book.ttf);
     font-family: golf;
 }
 
-@font-face{
+@font-face {
     src: url(../media/Ndiscover\ -\ Point\ Soft\ DEMO\ Light.otf);
     font-family: golf-light;
 }
 
 
-h1{
+h1 {
     font-family: golf;
 }
-h2{ 
+
+h2 {
     font-family: golf;
 }
-h3{ 
+
+h3 {
     font-family: golf;
 }
-h5{
+
+h5 {
     font-family: golf-light;
 }
-input{
+
+input {
     font-family: golf-light;
 }
-p{
+
+p {
     font-family: golf-light;
 }
-u{
+
+u {
     font-family: golf-light;
 }
-button{
+
+button {
     font-family: golf;
 }
+
+/* David */
 
 :root {
     --blue: #4B75FF;
@@ -240,25 +249,27 @@ h3:hover {
     top: -15px;
     margin: 10px;
 }
-.icon_small{
+
+.icon_small {
     width: 75px;
     position: relative;
     top: -15px;
     margin: 10px 3px 10px 10px;
 }
-.icon_contact{
+
+.icon_contact {
     width: 50px;
     position: relative;
     top: -15px;
     margin: 10px 3px 10px 10px;
 }
 
-.icon_margin_left{
+.icon_margin_left {
     margin-right: 0px;
 }
 
-.function_name{
-margin: 10px;
+.function_name {
+    margin: 10px;
 }
 
 
@@ -274,6 +285,7 @@ contact {
     margin: 10px 0px;
 }
 
+/* David */
 #signUpContainer p {
     margin: 0 auto;
     text-align: center;
@@ -297,9 +309,10 @@ contact {
     top: -60px;
     z-index: 1;
     padding: 60px 20px 20px 20px;
-  display: none;
-  overflow: hidden;
+    display: none;
+    overflow: hidden;
 }
+
 /*Georgiana*/
 .content1 {
     width: 340px;
@@ -312,9 +325,10 @@ contact {
     top: -60px;
     z-index: 1;
     padding: 60px 20px 20px 20px;
-  display: none;
-  overflow: hidden;
+    display: none;
+    overflow: hidden;
 }
+
 /*Georgiana*/
 .content2 {
     width: 340px;
@@ -327,66 +341,67 @@ contact {
     top: -60px;
     z-index: 1;
     padding: 60px 20px 20px 20px;
-  display: none;
-  overflow: hidden;
+    display: none;
+    overflow: hidden;
 }
 
-#charts{
-    margin-top:20px;
+#charts {
+    margin-top: 20px;
 }
 
 
-#time{
-text-align: center;
-font-size: 16pt;
-font-family: golf-light;
+#time {
+    text-align: center;
+    font-size: 16pt;
+    font-family: golf-light;
 }
 
-.counter-display{
+.counter-display {
     text-align: center;
     font-size: 38pt;
     margin-top: 10px;
 }
 
-.buckets_used{
+.buckets_used {
     text-align: center;
     font-weight: 400;
     font-size: 12pt;
 }
 
-.counter-plus{
-width: 280px;
-height: 60px;
-background: #6CC073;
-color: white;
-font-weight: 700;
-font-size: 24pt;
-text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
-border: solid 2px #707070;
-padding: 0px;
+.counter-plus {
+    width: 280px;
+    height: 60px;
+    background: #6CC073;
+    color: white;
+    font-weight: 700;
+    font-size: 24pt;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+    border: solid 2px #707070;
+    padding: 0px;
 }
 
-.counter-minus{
-width: 180px;
-height: 40px;
-background: #FF6364;
-color: white;
-font-weight: 700;
-font-size: 11pt;
-text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-border: solid 2px #707070;
-padding: 0px;
+.counter-minus {
+    width: 180px;
+    height: 40px;
+    background: #FF6364;
+    color: white;
+    font-weight: 700;
+    font-size: 11pt;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    border: solid 2px #707070;
+    padding: 0px;
 }
 
-.bucket-icon{
+.bucket-icon {
     width: 200px;
     display: block;
     margin: 30px auto
 }
 
-.margin-top{
+.margin-top {
     margin: 30px 0px -5px 0px
 }
+
 /*Georgiana*/
 .btn-group button {
     display: block;
@@ -398,7 +413,8 @@ padding: 0px;
     cursor: pointer;
     background-color: white;
     padding: 5px;
-    float: left; /* Float the buttons side by side */
+    float: left;
+    /* Float the buttons side by side */
     margin-left: 10px;
     margin-top: 50px;
 }
@@ -409,24 +425,51 @@ padding: 0px;
     display: table;
 }
 
+/* David */
+#feedback_container {
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#feedback_container div {
+    height: auto;
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#feedback_container input {
+    height: 180px;
+    width: 90%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+
+
+}
+
 .btn-group button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-  }
-  
-  /* Add a background color on hover */
-  .btn-group button:hover {
+    border-right: none;
+    /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
     background-color: #cc3e56;
     color: white;
-  }
+}
 
-  .dt{
-      font-size: 18px;
-      text-align: center;
-      margin-top: 20px;
-  }
+.dt {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
 
-  .mapy{
-      max-width: 330px;
-      margin-left: -20px;
+.mapy {
+    max-width: 330px;
+    margin-left: -20px;
 
-  }
+}
