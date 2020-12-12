@@ -68,7 +68,7 @@ function appendChart() {
     data: {
       labels: data.day, // refering to the data object, holding data from prepareData()
       datasets: [{
-         barPercentage: 1.0,
+        barPercentage: 1.0,
         data: data.buckets, // refering to the data object, holding data from prepareData()
         label: 'Weekly buckets',
         borderWidth: 1,
@@ -80,18 +80,18 @@ function appendChart() {
     // Go to the docs to find more: https://www.chartjs.org/docs/latest/
     options: {
       title: {
-        
+
         display: true,
         text: 'Number of buckets of balls used'
       },
       scales: {
-         yAxes: [{
-           ticks: {
-             beginAtZero: true
-           },
-           
-         }]
-       }
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          },
+
+        }]
+      }
     }
 
   });
@@ -148,7 +148,7 @@ function appendChar() {
     data: {
       labels: month.week, // refering to the data object, holding data from prepareData()
       datasets: [{
-         barPercentage: 1.0,
+        barPercentage: 1.0,
         data: month.buckets, // refering to the data object, holding data from prepareData()
         label: 'Monthly buckets',
         borderWidth: 1,
@@ -160,18 +160,18 @@ function appendChar() {
     // Go to the docs to find more: https://www.chartjs.org/docs/latest/
     options: {
       title: {
-        
+
         display: true,
         text: 'Number of buckets of balls used'
       },
       scales: {
-         yAxes: [{
-           ticks: {
-             beginAtZero: true
-           },
-           
-         }]
-       }
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          },
+
+        }]
+      }
     }
 
   });
@@ -228,7 +228,7 @@ function appendCha() {
     data: {
       labels: year.month, // refering to the data object, holding data from prepareData()
       datasets: [{
-         barPercentage: 1.0,
+        barPercentage: 1.0,
         data: year.buckets, // refering to the data object, holding data from prepareData()
         label: 'Yearly buckets',
         borderWidth: 1,
@@ -240,18 +240,18 @@ function appendCha() {
     // Go to the docs to find more: https://www.chartjs.org/docs/latest/
     options: {
       title: {
-        
+
         display: true,
         text: 'Number of buckets of balls used'
       },
       scales: {
-         yAxes: [{
-           ticks: {
-             beginAtZero: true
-           },
-           
-         }]
-       }
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          },
+
+        }]
+      }
     }
 
   });

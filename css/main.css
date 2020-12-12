@@ -8,13 +8,26 @@
     font-family: golf-light;
 }
 
+@font-face{
+    src: url(../media/FontsFree-Net-point-soft-bold.ttf);
+    font-family: golf-bold;
+}
 
+
+<<<<<<< Updated upstream
 h1 {
     font-family: golf;
 }
 
 h2 {
     font-family: golf;
+=======
+h1{
+    font-family: golf-bold;
+}
+h2{ 
+    font-family: golf-bold;
+>>>>>>> Stashed changes
 }
 
 h3 {
@@ -32,12 +45,22 @@ input {
 p {
     font-family: golf-light;
 }
+<<<<<<< Updated upstream
 
 u {
     font-family: golf-light;
 }
 
 button {
+=======
+u{
+    font-family: golf;
+}
+button{
+    font-family: golf-bold;
+}
+div{
+>>>>>>> Stashed changes
     font-family: golf;
 }
 
@@ -268,8 +291,14 @@ h3:hover {
     margin-right: 0px;
 }
 
+<<<<<<< Updated upstream
 .function_name {
     margin: 10px;
+=======
+.function_name{
+margin: 10px;
+font-family: golf;
+>>>>>>> Stashed changes
 }
 
 
@@ -350,10 +379,17 @@ contact {
 }
 
 
+<<<<<<< Updated upstream
 #time {
     text-align: center;
     font-size: 16pt;
     font-family: golf-light;
+=======
+#time{
+text-align: center;
+font-size: 16pt;
+font-family: golf;
+>>>>>>> Stashed changes
 }
 
 .counter-display {
