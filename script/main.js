@@ -340,9 +340,15 @@ function signOut() {
 function signUp() {
   let email = document.querySelector("#signUpEmail").value;
   let password = document.querySelector("#signUpPassw").value;
+  let texxt = document.querySelector("#texxt").value;
+    
 
-  auth.createUserWithEmailAndPassword(email, password);
-  alert("User Created");
+  auth.createUserWithEmailAndPassword(email, password).then(cred =>{
+    return db.collection('users').doc(cred.user.uid).set({
+      text: texxt
+    });
+  })
+  alert(user.uid);
 }
 
 
