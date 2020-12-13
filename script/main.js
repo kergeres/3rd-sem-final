@@ -333,7 +333,7 @@ function signUp() {
   let email = document.querySelector("#signUpEmail").value;
   let password = document.querySelector("#signUpPassw").value;
   let texxt = document.querySelector("#texxt").value;
-    
+
   // create the accunt with firestore function
   auth.createUserWithEmailAndPassword(email, password)
   // .then(cred =>{
@@ -346,14 +346,14 @@ function signUp() {
 
 // David Papp
 function signIn() {
-  
+
   let email = document.querySelector("#signUpEmail").value;
   let password = document.querySelector("#signUpPassw").value;
   alert(`${email} signed in!`);
   let CUser = auth.currentUser;
   // sign in the accunt with firestore function
   auth.signInWithEmailAndPassword(email, password);
-  
+
 }
 
 // David Papp
@@ -362,8 +362,7 @@ function signOut() {
   alert("User Signed out");
 }
 // David Papp
-function sendFeedback()
-{
+function sendFeedback() {
   // array to store the feedback text
   let feedbacks = [];
   let message = document.querySelector("#feedb").value
@@ -375,8 +374,7 @@ function sendFeedback()
 
 }
 // David Papp
-function appendReg()
-{
+function appendReg() {
   let htmltempl = `
   <section id="signUpContainer">
   <img src="/img/Logo.png" class="auth-logo">
@@ -393,8 +391,7 @@ function appendReg()
   document.querySelector(".function_buttons").innerHTML = htmltempl;
 }
 // David Papp
-function appendHome()
-{
+function appendHome() {
   let htmltempl = `
   <button class="function_button collapsible">
   <h1 class="function_name">Add buckets</h1>
@@ -443,11 +440,10 @@ function appendHome()
           <button onclick="showChart('mnt')" class="bttn">Monthly</button>
           <button onclick="showChart('yrl')" class="bttn">Yearly</button>
       </div>`;
-document.querySelector(".function_buttons").innerHTML = htmltempl;
+  document.querySelector(".function_buttons").innerHTML = htmltempl;
 }
 // David Papp
-function appendLog()
-{
+function appendLog() {
   document.querySelector(".menu-btn").checked = false;
   let htmltempl = `<section id="signUpContainer">
   <img src="/img/Logo.png" class="auth-logo">
@@ -461,11 +457,10 @@ function appendLog()
   </form>
 </section>`;
 
-document.querySelector(".function_buttons").innerHTML = htmltempl;
+  document.querySelector(".function_buttons, overflow").innerHTML = htmltempl;
 }
 // David Papp
-function appendCont()
-{
+function appendCont() {
   document.querySelector(".menu-btn").checked = false;
   let htmltempl = `<contact>
   <h1>Get in touch!</h1>
@@ -510,7 +505,7 @@ function appendCont()
 
         </div>`;
 
-document.querySelector(".function_buttons").innerHTML = htmltempl;
+  document.querySelector(".function_buttons").innerHTML = htmltempl;
 }
 
 
@@ -518,11 +513,15 @@ document.querySelector(".function_buttons").innerHTML = htmltempl;
 
 let counterSubmit = document.querySelector('.counter');
 function submitThis() {
-  db.collection("user").doc(buckets).set({
+  db.collection("user").doc("date").set({
     date: n,
     number: count + 1,
   })
     .then(function () {
       console.log(count);
     });
+}
+
+function home() {
+  setTimeout(function () { document.getElementById('home').click(); }, 3000);
 }

@@ -222,6 +222,7 @@ header {
     padding: 20px;
     top: 10px;
     left: 1.5em;
+    height: 100vh;
 }
 
 .nav_link {
@@ -243,7 +244,6 @@ h3:hover {
 .menu-btn:checked~.dropdown_menu {
     display: flex;
 }
-
 /* function buttons */
 
 .function_button {
@@ -298,6 +298,7 @@ contact {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 40px 25px;
 }
 
 .contact_item {
