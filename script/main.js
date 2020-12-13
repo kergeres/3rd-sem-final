@@ -349,7 +349,10 @@ function sendFeedback()
   let feedbacks = [];
  let message = document.querySelector("#feedb").value
 
+document.querySelector("#feedb").value = "";
  feedbacks.push(message);
+
+ alert("feedback sent!")
 
  
 
@@ -433,15 +436,64 @@ function appendLog()
       <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
       <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
       <!-- <input id="signUpPassword2" type="password" placeholder="Password"> -->
-      <button onclick="appendHome(); signIn()">sign in</button>
+      <button onclick="signIn();">sign in</button>
       <p onclick="appendReg()">not registered? sign up <u>here</u></p>
   </form>
 </section>`;
 
 document.querySelector(".function_buttons").innerHTML = htmltempl;
 }
+function appendCont()
+{
+  document.querySelector(".menu-btn").checked = false;
+  let htmltempl = `<contact>
+  <h1>Get in touch!</h1>
+  <li class="contact_item"><a href="https://goo.gl/maps/mhuqvzkgrjT1NQidA" target="_blank" class="nav_link">
+          <img class="icon_contact margin-top" src="./media/location.png">
+          <h3>Łagiewnicka 233, Łódź</h3>
+      </a></li>
+
+  <li class="contact_item"><a href="tel:+48660749471" target="_blank" class="nav_link">
+          <img class="icon_contact margin-top" src="./media/smartphone.png">
+          <h3>+48 660 749 471</h3>
+      </a>
+  </li>
+
+  <li class="contact_item">
+      <a href="mailto:golfowy@golfowy.pl" class="nav_link" target="_blank">
+          <img class="icon_contact margin-top" src="./media/email.png">
+          <h3>golfowy@golfowy.pl</h3>
+      </a>
+  </li>
+
+  <li class="contact_item"><a href="http://www.golfowy.pl/" target="_blank" class="nav_link">
+          <img class="icon_contact margin-top" src="./media/internet.png">
+          <h3>golfowy.pl</h3>
+      </a>
+  </li>
+
+  <li class="contact_item"><a href="https://www.facebook.com/golfowy" target="_blank" class="nav_link">
+          <img class="icon_contact margin-top" src="./media/facebook.png">
+          <h3>facebook.com/golfowy</h3>
+      </a>
+  </li>
+</contact>
+<div id="feedback_container">
+            <div>
+                <h1>Technical issue?</h1>
+                <p>Do you have problem with the application? Leave us a feedback</p>
+            </div>
+            <input type="text" id="feedb">
+            <button onclick="sendFeedback()">submit</button>
+
+
+        </div>`;
+
+document.querySelector(".function_buttons").innerHTML = htmltempl;
+}
 
 function signUp() {
+  document.querySelector(".menu-btn").checked = false;
   let email = document.querySelector("#signUpEmail").value;
   let password = document.querySelector("#signUpPassw").value;
   let texxt = document.querySelector("#texxt").value;

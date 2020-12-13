@@ -8,16 +8,17 @@
     font-family: golf-light;
 }
 
-@font-face{
+@font-face {
     src: url(../media/FontsFree-Net-point-soft-bold.ttf);
     font-family: golf-bold;
 }
 
 
-h1{
+h1 {
     font-family: golf-bold;
 }
-h2{ 
+
+h2 {
     font-family: golf-bold;
 }
 
@@ -36,13 +37,16 @@ input {
 p {
     font-family: golf-light;
 }
-u{
+
+u {
     font-family: golf;
 }
-button{
+
+button {
     font-family: golf-bold;
 }
-div{
+
+div {
     font-family: golf;
 }
 
@@ -89,8 +93,18 @@ button {
     margin-top: 80px;
 }
 
+form u:hover {
+    color: lightslategray;
+    cursor: pointer;
+}
+
+.dropdown_menu li {
+    cursor: pointer;
+}
+
 #signUpContainer button:hover {
-    border-color: black;
+    color: white;
+    border-color: white;
 }
 
 .auth-logo {
@@ -273,9 +287,9 @@ h3:hover {
     margin-right: 0px;
 }
 
-.function_name{
-margin: 10px;
-font-family: golf;
+.function_name {
+    margin: 10px;
+    font-family: golf;
 }
 
 
@@ -356,10 +370,10 @@ contact {
 }
 
 
-#time{
-text-align: center;
-font-size: 16pt;
-font-family: golf;
+#time {
+    text-align: center;
+    font-size: 16pt;
+    font-family: golf;
 }
 
 .counter-display {
@@ -434,8 +448,14 @@ font-family: golf;
 /* David */
 #feedback_container {
     height: auto;
+    margin-top: 50px;
     width: 100%;
-    border: 1px solid black;
+
+}
+
+#feedback_container h1 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 #feedback_container div {
