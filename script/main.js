@@ -522,6 +522,6 @@ function submitThis() {
     });
 }
 
-function home() {
-  setTimeout(function () { document.getElementById('home').click(); }, 3000);
+window.onload = function () {
+  document.getElementById('home').click();
 }
