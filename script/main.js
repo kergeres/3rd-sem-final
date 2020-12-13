@@ -522,6 +522,9 @@ function submitThis() {
     });
 }
 
-window.onload = function () {
-  document.getElementById('home').click();
+function addBuckets() {
+  window.onload = function () {
+    document.getElementById('home').click();
+  }
 }
+
