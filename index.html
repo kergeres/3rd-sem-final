@@ -53,6 +53,10 @@
                     <h2>Log out</h2>
                 </a>
             </li>
+            <li onclick="appendLog()" class="menu_item"><a class="nav_link">
+                    <h2>Log in / register</h2>
+                </a>
+            </li>
         </ul>
     </menu>
     <section class="function_buttons">
@@ -122,29 +126,9 @@
 
     </section>
     <main>
-        <section id="signUpContainer">
-            <img src="/img/Logo.png" class="auth-logo">
+        
 
-            <form>
-                <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
-                <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
-                <input id="texxt" type="text" placeholder="valami">
-
-                <button onclick="signUp()">sign up</button>
-            </form>
-        </section>
-
-        <section id="signUpContainer">
-            <img src="/img/Logo.png" class="auth-logo">
-
-            <form>
-                <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
-                <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
-                <!-- <input id="signUpPassword2" type="password" placeholder="Password"> -->
-                <button onclick="signIn()">sign in</button>
-                <p>not registered? sign up <u>here</u></p>
-            </form>
-        </section>
+        
         <div id="feedback_container">
             <div>
                 <h1>Technical issue?</h1>

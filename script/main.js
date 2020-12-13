@@ -329,10 +329,11 @@ const auth = firebase.auth();
 function signIn() {
   let email = document.querySelector("#signUpEmail").value;
   let password = document.querySelector("#signUpPassw").value;
+  alert(`${email} signed in!`);
   let CUser = auth.currentUser;
   auth.signInWithEmailAndPassword(email, password);
   
-  alert(CUser.email);
+  
   
 
   
@@ -352,6 +353,92 @@ function sendFeedback()
 
  
 
+}
+
+function appendReg()
+{
+  let htmltempl = `<section id="signUpContainer">
+  <img src="/img/Logo.png" class="auth-logo">
+
+  <form>
+      <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
+      <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
+      <input id="texxt" type="text" placeholder="valami">
+
+      <button onclick="signUp(); appendLog()">sign up</button>
+  </form>
+</section>`;
+
+document.querySelector(".function_buttons").innerHTML = htmltempl;
+}
+function appendHome()
+{
+  let htmltempl = `<button class="function_button collapsible">
+  <h1 class="function_name">Add buckets</h1>
+  <img class="icon" src="./media/bucket.png">
+</button>
+<div class="content">
+  <div id="time"></div>
+  <h1 class="counter-display">(..)</h1>
+  <h5 class="buckets_used">buckets used</h5>
+  <img src="./media/bucket-icon.png" class="bucket-icon">
+  <button class="counter counter-plus" onclick="submitThis()">ADD BUCKET</button>
+  <button class="counter counter-minus" onclick="submitThis()">DELETE BUCKET</button>
+</div>
+<button class="function_button collapsible">
+  <h1 class="function_name">Upcoming events</h1>
+  <img class="icon_small" src="./media/callendar.png">
+</button>
+<div class="content">
+  <section id="calendarContainer">
+      <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%236cc073&amp;ctz=Europe%2FBudapest&amp;src=d3JpdGVhbmVtYWlsdG9kYXZpZEBnbWFpbC5jb20&amp;src=NWhwbnF2bjNoMnZiY3JobGxyN29jdGRvMnVkcWZrbW5AaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%237CB342&amp;showTitle=0&amp;title=Events&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;showTz=0&amp;hl=en_GB&amp;showNav=0&amp;showDate=1"
+          style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+  </section>
+</div>
+<button class="function_button collapsible" onclick="getData();">
+  <h1 class="function_name">My buckets history</h1>
+  <img class="icon" src="./media/chart.png">
+</button>
+<div class="content1">
+  <section id="charts">
+      <section id="wkl">
+          <canvas id="chartContainer"></canvas>
+          <h1 class="dt">10-17 November 2020</h1>
+      </section>
+      <section id="mnt">
+          <canvas id="chart"></canvas>
+          <h1 class="dt">November 2020</h1>
+      </section>
+      <section id="yrl">
+          <canvas id="chrt"></canvas>
+          <h1 class="dt">2020</h1>
+      </section>
+      <div class="btn-group">
+          <button onclick="showChart('wkl')" class="bttn">Weekly</button>
+          <button onclick="showChart('mnt')" class="bttn">Monthly</button>
+          <button onclick="showChart('yrl')" class="bttn">Yearly</button>
+      </div>`;
+
+document.querySelector(".function_buttons").innerHTML = htmltempl;
+}
+function appendLog()
+{
+  document.querySelector(".menu-btn").checked = false;
+  let htmltempl = `<section id="signUpContainer">
+  <img src="/img/Logo.png" class="auth-logo">
+
+  <form>
+      <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
+      <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
+      <!-- <input id="signUpPassword2" type="password" placeholder="Password"> -->
+      <button onclick="appendHome(); signIn()">sign in</button>
+      <p onclick="appendReg()">not registered? sign up <u>here</u></p>
+  </form>
+</section>`;
+
+document.querySelector(".function_buttons").innerHTML = htmltempl;
 }
 
 function signUp() {
