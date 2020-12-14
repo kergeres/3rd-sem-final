@@ -521,6 +521,8 @@ function authData() {
   })
 }
 
+
+// Wiktor
 function addBuckets() {
   document.getElementById("menu-btn").checked = false;
   document.getElementById('addBuckets').click();
