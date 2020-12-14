@@ -380,7 +380,7 @@ function appendReg() {
   <form>
       <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
       <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
-      <input id="texxt" type="text" placeholder="valami">
+      <input id="texxt" type="text" placeholder="Name">
 
       <button onclick="signUp(); appendLog()">sign up</button>
   </form>
