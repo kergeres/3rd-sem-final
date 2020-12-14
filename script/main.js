@@ -1,4 +1,4 @@
-// home
+// home - Wiktor
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -14,8 +14,6 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-
-
 
 //Georgiana
 //creating the weekly charts 
@@ -271,7 +269,7 @@ function showChart(id) {
 // call the function with the id of the chart wanted to display by default
 showChart("wkl");
 
-// date 
+// date - Wiktor
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
@@ -282,7 +280,7 @@ m = monthNames[n.getMonth()];
 d = n.getDate();
 document.getElementById("time").innerHTML = d + " " + m + " " + y;
 
-// buckets counter 
+// buckets counter - Wiktor
 let counterDisplayElem = document.querySelector('.counter-display');
 let counterMinusElem = document.querySelector('.counter-minus');
 let counterPlusElem = document.querySelector('.counter-plus');
@@ -509,7 +507,7 @@ function appendCont() {
 }
 
 
-// add buckets to firebase
+// add buckets to firebase - Wiktor
 
 let counterSubmit = document.querySelector('.counter');
 function submitThis() {
@@ -523,8 +521,9 @@ function submitThis() {
 }
 
 function addBuckets() {
+  window.alert("test");
   window.onload = function () {
-    document.getElementById('home').click();
+    document.getElementById('addBuckets').click();
+    window.alert("test2");
   }
 }
-
