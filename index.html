@@ -14,8 +14,9 @@
 
 <body>
     <header>
-        <img class="logo" src="./media/logo.png">
-
+        <a href="">
+            <img class="logo" src="media/logo.png">
+        </a>
     </header>
     <menu>
         <input class="menu-btn" type="checkbox" id="menu-btn">
@@ -26,23 +27,23 @@
                 </a></li>
 
 
-            <li class="menu_item"><a href="" class="nav_link" onclick="addBuckets()">
+            <li class="menu_item"><a class="nav_link" onclick="addBuckets()">
                     <h2>Add buckets</h2>
                 </a>
             </li>
 
             <li class=" menu_item">
-                <a href="" class="nav_link">
+                <a class="nav_link" onclick="events()">
                     <h2>Upcoming events</h2>
                 </a>
             </li>
 
-            <li class="menu_item"><a class="nav_link">
+            <li class=" menu_item"><a class="nav_link" onclick="history()">
                     <h2>My buckets history</h2>
                 </a>
             </li>
 
-            <li class="menu_item"><a class="nav_link">
+            <li class=" menu_item"><a class="nav_link" onclick="map()">
                     <h2>Map</h2>
                 </a>
             </li>
@@ -73,7 +74,7 @@
             <button class="counter counter-plus" onclick="authData()">ADD BUCKET</button>
             <button class="counter counter-minus" onclick="authData()">DELETE BUCKET</button>
         </div>
-        <button class="function_button collapsible">
+        <button class="function_button collapsible" id="events">
             <h1 class="function_name">Upcoming events</h1>
             <img class="icon_small" src="./media/callendar.png">
         </button>
@@ -85,7 +86,7 @@
 
             </section>
         </div>
-        <button class="function_button collapsible" onclick="getData();">
+        <button class="function_button collapsible" id="history" onclick="getData();">
             <h1 class="function_name">My buckets history</h1>
             <img class="icon" src="./media/chart.png">
         </button>
@@ -110,7 +111,7 @@
                 </div>
             </section>
         </div>
-        <button class="function_button collapsible">
+        <button class="function_button collapsible" id="map">
             <h1 class="function_name">Map</h1>
             <img class="icon_small icon_margin_left" src="./media/map.png">
         </button>

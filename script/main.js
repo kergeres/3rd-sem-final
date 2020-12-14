@@ -522,10 +522,21 @@ function authData() {
 }
 
 function addBuckets() {
-
+  document.getElementById("menu-btn").checked = false;
+  document.getElementById('addBuckets').click();
 }
 
+function events() {
+  document.getElementById("menu-btn").checked = false;
+  document.getElementById('events').click();
+}
 
-window.onload = function () {
-  document.getElementById('addBuckets').click();
+function history() {
+  document.getElementById("menu-btn").checked = false;
+  document.getElementById('history').click();
+}
+
+function map() {
+  document.getElementById("menu-btn").checked = false;
+  document.getElementById('map').click();
 }
