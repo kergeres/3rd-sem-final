@@ -330,16 +330,11 @@ function signUp() {
   // value from the user typed input fields
   let email = document.querySelector("#signUpEmail").value;
   let password = document.querySelector("#signUpPassw").value;
-  let texxt = document.querySelector("#texxt").value;
+  
 
   // create the accunt with firestore function
   auth.createUserWithEmailAndPassword(email, password)
-  // .then(cred =>{
-  //   return db.collection('users').doc(cred.user.uid).set({
-  //     text: texxt
-  //   });
-  // })
-  // alert(user.uid);
+ 
 }
 
 // David Papp
@@ -380,7 +375,7 @@ function appendReg() {
   <form>
       <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
       <input autocomplete="current-password" id="signUpPassw" type="password" placeholder="Password">
-      <input id="texxt" type="text" placeholder="Name">
+     
 
       <button onclick="signUp(); appendLog()">sign up</button>
   </form>
