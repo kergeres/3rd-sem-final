@@ -400,8 +400,8 @@ function appendHome() {
   <h1 class="counter-display">(..)</h1>
   <h5 class="buckets_used">buckets used</h5>
   <img src="./media/bucket-icon.png" class="bucket-icon">
-  <button class="counter counter-plus" onclick="submitThis()">ADD BUCKET</button>
-  <button class="counter counter-minus" onclick="submitThis()">DELETE BUCKET</button>
+  <button class="counter counter-plus" onclick="authData()">ADD BUCKET</button>
+  <button class="counter counter-minus" onclick="authData()">DELETE BUCKET</button>
   </div>
   <button class="function_button collapsible">
   <h1 class="function_name">Upcoming events</h1>
@@ -507,28 +507,18 @@ function appendCont() {
 }
 
 
-// add buckets to firebase - Wiktor
-
-
-
-let counterSubmit = document.querySelector('.counter');
-
-function submitThis() {
-
+// create unique userdata to firebase - David Papp
+function authData() {
   let counterSubmit = document.querySelector('.counter');
 
-
   let user = firebase.auth().currentUser;
-  alert(user.uid);
+  //create a new collection insede the user collection
   db.collection("user").doc(user.uid).set({
-    date: n,
-    number: count + 1,
+    date: n, //currect date
+    number: count + 1, //baskets number
   }, {
     merge: true
   })
-
-
-
 }
 
 function addBuckets() {
