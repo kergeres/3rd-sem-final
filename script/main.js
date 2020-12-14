@@ -375,7 +375,7 @@ function sendFeedback() {
 function appendReg() {
   let htmltempl = `
   <section id="signUpContainer">
-  <img src="/img/Logo.png" class="auth-logo">
+  <img src="./media/Logo.png" class="auth-logo">
 
   <form>
       <input autocomplete="email" id="signUpEmail" type="email" placeholder="Email">
