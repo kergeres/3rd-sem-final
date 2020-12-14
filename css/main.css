@@ -246,6 +246,7 @@ h3:hover {
 .menu-btn:checked~.dropdown_menu {
     display: flex;
 }
+
 /* Wiktor */
 
 .function_button {
@@ -294,8 +295,8 @@ h3:hover {
     font-family: golf;
 }
 
-#addBuckets{
-margin-top: 50px;
+#addBuckets {
+    margin-top: 50px;
 }
 
 contact {
@@ -315,6 +316,10 @@ contact {
 #signUpContainer p {
     margin: 0 auto;
     text-align: center;
+}
+
+#calendarContainer {
+    width: 100%;
 }
 
 .calendar-e {
@@ -457,9 +462,9 @@ contact {
     height: auto;
     margin-top: 50px;
     width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #feedback_container h1 {
