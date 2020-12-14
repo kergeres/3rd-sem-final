@@ -517,7 +517,7 @@ function submitThis() {
 
   let counterSubmit = document.querySelector('.counter');
 
-  function submitThis() {
+  
     let user = firebase.auth().currentUser;
     alert(user.uid);
     db.collection("user").doc(user.uid).set({
@@ -527,8 +527,6 @@ function submitThis() {
       merge: true
     })
       
-      
-  }
   
     
 }
