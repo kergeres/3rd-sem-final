@@ -517,24 +517,26 @@ function submitThis() {
 
   let counterSubmit = document.querySelector('.counter');
 
-  
-    let user = firebase.auth().currentUser;
-    alert(user.uid);
-    db.collection("user").doc(user.uid).set({
-      date: n,
-      number: count + 1,
-    }, {
-      merge: true
-    })
-      
-  
-    
+
+  let user = firebase.auth().currentUser;
+  alert(user.uid);
+  db.collection("user").doc(user.uid).set({
+    date: n,
+    number: count + 1,
+  }, {
+    merge: true
+  })
+
+
+
 }
 
 function addBuckets() {
-  window.alert("test");
-  window.onload = function () {
-    document.getElementById('addBuckets').click();
-    window.alert("test2");
-  }
+  window.onload = function afterPageLoad() { window.alert("test"); }
+}
+
+
+function afterPageLoad() {
+  document.getElementById('addBuckets').click();
+  window.alert("test2")
 }
