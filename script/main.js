@@ -532,11 +532,10 @@ function submitThis() {
 }
 
 function addBuckets() {
-  window.onload = function afterPageLoad() { window.alert("test"); }
+
 }
 
 
-function afterPageLoad() {
+window.onload = function () {
   document.getElementById('addBuckets').click();
-  window.alert("test2")
 }

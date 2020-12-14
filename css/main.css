@@ -403,7 +403,7 @@ contact {
     font-weight: 700;
     font-size: 24pt;
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
-    border: solid 2px #707070;
+    border: none;
     padding: 0px;
 }
 
@@ -415,7 +415,7 @@ contact {
     font-weight: 700;
     font-size: 11pt;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-    border: solid 2px #707070;
+    border: none;
     padding: 0px;
 }
 
