@@ -516,13 +516,19 @@ document.querySelector(".function_buttons").innerHTML = htmltempl;
 
 // add buckets to firebase
 
+
+
 let counterSubmit = document.querySelector('.counter');
+
 function submitThis() {
-  db.collection("user").doc(buckets).set({
+  let user = firebase.auth().currentUser;
+  alert(user.uid);
+  db.collection("user").doc(user.uid).set({
     date: n,
     number: count + 1,
+  }, {
+    merge: true
   })
-    .then(function () {
-      console.log(count);
-    });
+    
+    
 }
